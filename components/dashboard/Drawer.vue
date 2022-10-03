@@ -25,6 +25,7 @@
       <v-list-item
         v-for="item in items"
         :key="item.title"
+        :to="item.path"
       >
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
@@ -43,9 +44,11 @@ export default {
   data () {
     return {
       items: [
-        { title: 'Home', icon: 'mdi-home-city' },
-        { title: 'My Account', icon: 'mdi-account' },
-        { title: 'Users', icon: 'mdi-account-group-outline' }
+        {
+          title: 'Users',
+          icon: 'mdi-account-group-outline',
+          path: '/dashboard/users'
+        }
       ]
     }
   }
